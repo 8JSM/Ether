@@ -1,7 +1,16 @@
-function sayHello(name) {
-    console.log("Hello my name is " + name);
+const calculator = {
+    plus: function(firstOfNumber, secondOfNumber) {
+        console.log(firstOfNumber + secondOfNumber);
+    },
+    subtraction: function(firstOfNumber, secondOfNumber) {
+        console.log(firstOfNumber - secondOfNumber);
+    },
+    divide: function(firstOfNumber, secondOfNumber) {
+        console.log(firstOfNumber / secondOfNumber);
+    },
+    multiple: function(firstOfNumber, secondOfNumber) {
+        console.log(firstOfNumber ** secondOfNumber);
+    }
 }
 
-sayHello("nico");
-sayHello("dal");
-sayHello("lynn");
+calculator.plus(5, 3);
