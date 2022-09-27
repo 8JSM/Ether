@@ -60,6 +60,7 @@ const powerResult = calculator.power(plusResult, subtractionResult);**/
 const loginForm = document.querySelector(".login-form");
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
+const greeting = document.querySelector("#greeting");
 
 /*function loginBtnClick() {
     const userName = loginInput.value;
@@ -72,9 +73,32 @@ const loginButton = loginForm.querySelector("button");
 }**/
 /*loginButton.addEventListener("click", loginBtnClick);**/
 
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
 function onLoginSubmit(event) {
     event.preventDefault();
-    console.log(loginInput.value);
+    
+    const userName = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, userName);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    console.log(userName);
+    /*greeting.innerText = "Hello " + userName;**/
+    greeting.innerText = `Hello ${userName}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if(savedUsername === null) {
+    // show the form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    // show the greeting
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    greeting.innerText = `Hello ${savedUsername}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}

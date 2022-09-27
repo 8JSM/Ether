@@ -13,7 +13,7 @@
         <title>Momentum</title>
     </head>
     <body>
-        <form class="login-form">
+        <form class="login-form" class="hidden">
             <input 
              required
              maxlength= "15" 
@@ -21,7 +21,10 @@
              placeholder="what is your name?" >
             <input type="submit" value="Log In">
         </form>
-        
+        <!--<a href="https://nomadcoders.co">Go to courses</a>-->
+        <h2 id="clock">00:00:00</h2>
+        <h1 id="greeting" class="hidden"></h1>
+
         <!--<div class="hello">
             <h1>Grab me!</h1>
         </div>-->
@@ -30,6 +33,7 @@
 
         <!-- javaScript -->
         <script src="js/script.js"></script>
+        <script src="js/clock.js"></script>
 
 
     </body>
