@@ -1,13 +1,15 @@
-body {
-    background-color: beige;
-}
 
 h1 {
-    color: cornflowerblue;
+    margin: auto;
+    color: #55E6C1;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h2 {
-    color: cornflowerblue;
+    /* color: cornflowerblue; */
+    margin: auto;
+    color: #55E6C1;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .active {
@@ -16,4 +18,56 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+#weather {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #55E6C1;
+
+}
+
+#todo-form {
+    margin: auto;
+}
+
+#todo-list {
+    margin-right: auto;
+    margin-left: auto;
+    color: #55E6C1;
+}
+
+#quote {
+    display: grid;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #55E6C1;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+img {
+    width: 1920px;
+    height: 1080px;
+   background-size: cover;
+}
+
+.info {
+    display: grid;
+    /* margin: auto; */
+    position: absolute;
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-column: 1; */
+    align-content: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
